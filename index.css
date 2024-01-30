@@ -2,7 +2,7 @@
 body {
 
     margin: 0;
-    
+    overflow: hidden;
 }
 
 
@@ -29,14 +29,17 @@ body {
     position: relative;
     text-align: center;
     color: black;
+    animation-name: animation-bottom;
+    animation-duration: 1s;
 
 }
 
 #menu_scroll {
 
-    width: 1500px;
-    height: 800px;
+    width: 1300px;
+    height: 600px;
     position: relative;
+    max-width: 1500px;
 
 }
 
@@ -54,7 +57,31 @@ body {
 
 #start {
 
-    position: absolute;
     font-family: 'Papyrus';
     font-weight: bold;
+    background-color: transparent;
+    border: none;
+    margin-top: 150px;
+    cursor: pointer;
+
+}
+
+#start:hover {
+
+    color: red;
+
+}
+
+@keyframes animation-bottom {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
 }
