@@ -11,18 +11,20 @@ body {
     height: 100%;
     width: 100%;
     position: absolute;
-    left: 0
+    left: 0;
 
 }
 
 #witch {
 
-    position: relative;
-    margin-left: 1050px;
-    margin-top: 50px;
+    position: absolute;
+    margin-left: 60%;
+    margin-top: 10%;
     display: none;
+    height: 600px;
 
 }
+
 
 .container {
 
@@ -82,6 +84,20 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+
+}
+
+@keyframes animation-top {
+
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
     }
 
 }
