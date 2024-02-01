@@ -2,7 +2,8 @@
     
     <head>
         <title>Witch Alice</title>
-        <link rel="stylesheet" href="index.css"></link>
+        <link rel="stylesheet" href="style/index.css"></link>
+        <link rel="stylesheet" href="style/answer.css"></link>
     </head>
     
     <body>
@@ -14,9 +15,9 @@
 
             <div class="dialog_box" id="witch_dialog">
                 <img src="img/dialog.webp" id="dialog_ballon" />
-                <div class="dialog" id="dialog">
+                <h2 class="dialog" id="dialog">
                     Ah, finalmente alguém ousa cruzar a fronteira desta biblioteca enfeitiçada. Não pense que sua presença passa despercebida. Os passos do inquisidor ecoam nas sombras, e cada visita é uma faca de dois gumes.
-                </div>
+                </h2>
             </div>
             
             <div class="container" id="menu">
@@ -27,13 +28,20 @@
                 <button class="menu_text" id="start">Iniciar</button>
             </div>
 
+            <div class="player_answers" id="player_answers">
+                <img src="img/scroll.png" id="answer_scroll" />
+                <button id="witch_classifier" class="answer_button">Vi um bruxo enfrentando uns soldados, queria saber quem ele é.</button>
+            </div>
+
             <audio src="sounds/Royal Library.mp3" id="royal_library"></audio>
             <audio src="sounds/paper.mp3" id="paper"></audio>
+            <audio src="sounds/mystery_music.mp3" id="mystery_music"></audio>
 
         </center>
     
     <script rel="text/javascript" src="js/index.js"></script>
     <script rel="text/javascript" src="js/dialog.js"></script>
+    <script rel="text/javascript" src="js/questions.js"></script>
     </body>
 
 </html>
