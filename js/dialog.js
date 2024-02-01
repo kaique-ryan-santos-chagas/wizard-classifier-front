@@ -20,11 +20,14 @@ function changeDialogMessage(){
     else 
         dialog_index = dialog_sequence.indexOf(dialog.textContent) + 1;
 
-    if(dialog_sequence[dialog_index] != undefined){
+    if(dialog_sequence[dialog_index] != undefined)
         dialog.textContent = dialog_sequence[dialog_index];
-    }
+    else 
+        player_answers.style.display = 'block';
+        
     
 }   
+
 
 
     
