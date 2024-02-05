@@ -2,9 +2,20 @@
 .answer_button {
 
     font-family: 'Papyrus';
-    background-color: transparent;
-    position: relative;
+    position: absolute;
     transform: translate(-50%, -50%);
-    top: 50%;
     left: 50%;
+    top: 50%;
+    margin-top: 15%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+
+.answer_button:hover {
+
+    color: red;
+
 }
