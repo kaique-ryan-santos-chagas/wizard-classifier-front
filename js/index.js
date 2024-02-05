@@ -21,6 +21,7 @@ start_button.onclick = () => {
         library_audio.play();
         mystery_audio.play();
         
+        library_audio.onended = () => library_audio.play();
         mystery_audio.onended = () => mystery_audio.play();
 
         document.documentElement.requestFullscreen();
