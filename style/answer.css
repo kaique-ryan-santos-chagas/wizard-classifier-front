@@ -2,20 +2,60 @@
 .answer_button {
 
     font-family: 'Papyrus';
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
-    margin-top: 15%;
+    font-size: 20px;
     background-color: transparent;
     border: none;
     cursor: pointer;
     font-weight: bold;
+    animation-name: animation-bottom-buttons;
+    animation-duration: 1s;
 
 }
 
 .answer_button:hover {
 
     color: red;
+
+}
+
+#start_questions_button {
+
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    margin-top: 18%;
+
+}
+
+#button_yes {
+
+    position: absolute;
+    transform: translate(-45%, -50%);
+    left: 45%;
+    top: 50%;
+    margin-top: 18%;
+
+}
+
+#button_no {
+
+    position: absolute;
+    transform: translate(-55%, -50%);
+    left: 55%;
+    top: 50%;
+    margin-top: 18%;
+
+}
+
+@keyframes animation-bottom-buttons {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 
 }
