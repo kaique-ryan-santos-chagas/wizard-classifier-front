@@ -10,7 +10,6 @@ var questions = [
     'Era Astúto?', 
     'Era alguém leal?',
     'Era uma mulher?',
-    'Era um homem?',
     'Ele podia se transformar em animais?',
     'Ele tinha um Patrono?'
 
@@ -63,10 +62,16 @@ function getAnswer(button) {
     var question = dialog.textContent;
     var question_index = questions.indexOf(question);
 
-    if (button == 'yes')
+    if (button == 'yes'){
+        paper_audio.play();
         answers.push(buttonYes.value);
-    if (button == 'no')
+    }
+    
+    if (button == 'no'){
+        paper_audio.play();
         answers.push(buttonNo.value);
+
+    }
 
     console.log(answers);
 
@@ -74,6 +79,20 @@ function getAnswer(button) {
     buttonNo.remove();
     createAnswersButtons();
 
-    dialog.textContent = questions[question_index + 1];
+    if (questions[question_index + 1] != undefined)
+        dialog.textContent = questions[question_index + 1];
+    
+    else {
+
+        var bias_input = 1;
+        answers.push(bias_input);
+
+        dialog.textContent = 'Deixe-me pensar...';
+        player_answers.style.opacity = 0;
+        
+        getOutput();
+
+    }
+    
 
 }
