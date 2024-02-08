@@ -128,7 +128,7 @@ data = [
 
     {
 
-      "Nome": "Rony Wesley",
+      "Nome": "Rony Weasley",
       "Habilidade Magica": 3,
       "Idade": 33,
       "Conhecimento de Pocoes": 3,
