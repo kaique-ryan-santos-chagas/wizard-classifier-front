@@ -44,10 +44,17 @@ function getOutput(){
         magic_sound.play();
         witch = data[witch_index].Nome;
         
-        if (data[witch_index].Classe == 'Bruxo')
+        if (data[witch_index].Classe == 'Bruxo'){
             dialog.textContent = 'Acho que o Bruxo que você viu é o ' + witch; 
-        if (data[witch_index].Classe == 'Bruxa')
-            dialog.textContent = 'Acho que o Bruxo que você viu é a ' + witch;
+            getWizardPicture(witch);
+
+        }
+
+        if (data[witch_index].Classe == 'Bruxa'){
+            dialog.textContent = 'Acho que a Bruxa que você viu é a ' + witch;
+            getWizardPicture(witch);
+
+        }
 
     } 
 
@@ -56,14 +63,41 @@ function getOutput(){
         magic_sound.play();
         witch = data[witch_index_uncertainty].Nome;
         
-        if (data[witch_index_uncertainty].Classe == 'Bruxo')
-            dialog.textContent = 'Acho que o Bruxo que você viu é o ' + witch; 
-        if (data[witch_index_uncertainty].Classe == 'Bruxa')
-            dialog.textContent = 'Acho que a Bruxa que você viu é a ' + witch;
+        if (data[witch_index_uncertainty].Classe == 'Bruxo'){
+            dialog.textContent = 'Não tenho certeza, mas acho que o Bruxo que você viu era o ' + witch; 
+            getWizardPicture(witch);
+        }
+        
+        if (data[witch_index_uncertainty].Classe == 'Bruxa'){
+            dialog.textContent = 'Não tenho certeza, mas acho que a Bruxa que você viu era a ' + witch;
+            getWizardPicture(witch);
+        }
 
     }
 
     else 
         dialog.textContent = 'Eu infelizmente não sei quem era.';
 
+}
+
+
+function getWizardPicture(witch) {
+
+    var buttonYes = document.getElementById('button_yes');
+    var buttonNo = document.getElementById('button_no');
+
+    var witch_name = witch.toLowerCase();
+    var image_path = 'img/' + witch_name + '.png';
+    
+    var image = document.createElement('img');
+    image.setAttribute('class', 'wizard_picture');
+    image.setAttribute('src', image_path);
+    
+    player_answers_content.style.opacity = 1;
+    buttonYes.remove();
+    buttonNo.remove();
+
+    player_answers_content.append(image);
+
+    setTimeout(() => window.location.reload(), 10000);
 }
