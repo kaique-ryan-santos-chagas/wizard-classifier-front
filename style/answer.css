@@ -24,7 +24,7 @@
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
-    margin-top: 18%;
+    margin-top: 15%;
 
 }
 
@@ -34,7 +34,7 @@
     transform: translate(-45%, -50%);
     left: 45%;
     top: 50%;
-    margin-top: 18%;
+    margin-top: 15%;
 
 }
 
@@ -44,7 +44,20 @@
     transform: translate(-55%, -50%);
     left: 55%;
     top: 50%;
-    margin-top: 18%;
+    margin-top: 15%;
+
+}
+
+.wizard_picture {
+
+    width: 200px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    margin-top: 15%;
+    animation-name: animation-bottom-buttons;
+    animation-duration: 1s;
 
 }
 
