@@ -73,7 +73,6 @@ function getAnswer(button) {
 
     }
 
-    console.log(answers);
 
     buttonYes.remove();
     buttonNo.remove();
