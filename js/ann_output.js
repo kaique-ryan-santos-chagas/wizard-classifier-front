@@ -29,8 +29,6 @@ function getOutput(){
 
         error = CORRECT_OUTPUT - sum;
 
-        console.log('Error:', error.toFixed(1));
-
         if (error.toFixed(1) == 0.0)
             witch_index = outputs.indexOf(sum);
 
